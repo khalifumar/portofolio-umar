@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio – Contact</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Logo">Logo</a>
+
+      <nav class="nav-wrap" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="project.html">Project</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="blog.html">Articles</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <main>
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">
+            How to contact me?
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Email Now -->
+          <article class="contact-card" aria-labelledby="email-now-title">
+            <h3 id="email-now-title" class="contact-card-title">Email Now</h3>
+
+            <form id="contactForm" class="contact-form">
+              <label class="field">
+                <span>Full Name</span>
+                <input type="text" name="name" placeholder="Your name…" required />
+              </label>
+
+              <label class="field">
+                <span>Your Email</span>
+                <input type="email" name="email" placeholder="Your email…" required />
+              </label>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea name="message" rows="6" placeholder="Your message…" required></textarea>
+              </label>
+
+              <button type="submit" class="btn contact-submit" aria-label="Send Message">
+                <span class="paper-plane" aria-hidden="true">✈️</span>
+                Send Message
+              </button>
+
+              <p id="contactInfo" class="contact-info" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <!-- Right: Other -->
+          <!-- Right: Other -->
+          <aside class="contact-card contact-other">
+            <h3 class="contact-card-title">Other</h3>
+            <div class="socials">
+              <a href="https://www.instagram.com/khlfumar/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="assets/img/p_instagram.jpeg" alt="Instagram">
+              </a>
+              <a href="https://www.linkedin.com/in/khalifumaralfaruq/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="assets/img/p_linkedin.jpeg" alt="LinkedIn">
+              </a>
+              <a href="https://github.com/khalifumar" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="assets/img/p_github.jpeg" alt="GitHub">
+              </a>
+              <a href="https://medium.com/@khalif.umar.af" target="_blank" rel="noopener" aria-label="Medium">
+                <img src="assets/img/p_medium.png" alt="Medium">
+              </a>
+              <a href="mailto:khalifumardev@gmail.com" aria-label="Gmail">
+                <img src="assets/img/p_gmail.jpeg" alt="Gmail">
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

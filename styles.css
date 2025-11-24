@@ -1,0 +1,364 @@
+:root {
+  --bg:#0b0b0b; --text:#d9d9d9; --muted:#9a9a9a; --heading:#f5f5f5;
+  --chip-bg:#2b2b2b; --chip:#3a3a3a; --chip-active:#5a5a5a;
+  --btn-bg:#2e2e2e; --btn-bg-hover:#3a3a3a; --ring:rgba(255,255,255,.08);
+  --container:1080px;
+  --surface:#2a2a2a; --accent:#f4a300; --radius:18px; --shadow:0 10px 24px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:"Roboto",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  line-height:1.6;
+}
+
+/* ===== Header ===== */
+header{
+  position:sticky; top:0; z-index:50;
+  background:linear-gradient(to bottom, rgba(11,11,11,.9), rgba(11,11,11,.6) 60%, transparent);
+  backdrop-filter:blur(2px);
+}
+.topbar{max-width:var(--container); margin:0 auto; padding:24px 20px 12px; display:flex; align-items:center; gap:16px}
+.logo{font-weight:800; font-size:28px; color:var(--heading); letter-spacing:.5px; text-decoration:none}
+.nav-wrap{
+  margin-left:auto; background:var(--chip-bg); border-radius:999px; padding:6px;
+  display:flex; gap:8px; align-items:center;
+  box-shadow:0 0 0 1px var(--ring) inset, 0 10px 24px rgba(0,0,0,.25);
+}
+.nav-link{
+  display:inline-block; text-decoration:none; color:#e5e5e5; background:var(--chip);
+  padding:10px 18px; border-radius:999px; font-weight:500; border:0;
+  transition:background .16s ease, transform .1s ease;
+}
+.nav-link:hover{ background:var(--chip-active) }
+.nav-link:active{ transform:translateY(1px) }
+.nav-link.active{ background:#6a6a6a; color:#fff }
+
+/* ===== Layout ===== */
+.container{width:min(var(--container), 90vw); margin-inline:auto}
+.section-pad{padding:40px 0}
+.section-head h2{margin:0 0 6px; font-size:40px; color:var(--heading)}
+.section-sub{margin:0 0 26px; color:var(--muted); max-width:680px}
+
+/* ===== Hero (Home) ===== */
+main{max-width:var(--container); margin:0 auto; padding:50px 20px 40px}
+.hero{display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:48px}
+.hero h1{margin:0 0 8px; font-size:clamp(50px,4vw,51px); line-height:1.1; color:var(--heading); font-weight:1000}
+.hero h2{margin:0 0 28px; font-size:clamp(22px,3vw,40px); color:var(--heading); font-weight:500}
+.bio{max-width:720px; font-size:16px; text-align:justify}
+.bio p{margin:0 0 16px}
+.actions{display:flex; gap:16px; margin-top:28px}
+.btn{
+  display:inline-block; text-decoration:none; border:1px solid var(--ring); background:var(--btn-bg); color:#f5f5f5;
+  padding:12px 20px; border-radius:25px; font-weight:500; box-shadow:0 2px 0 rgba(255,255,255,.05) inset, 0 8px 20px rgba(0,0,0,.35);
+  transition:background .16s ease, transform .1s ease;
+}
+.btn:hover{background:var(--btn-bg-hover)} .btn:active{transform:translateY(1px)}
+.photo-wrap{display:grid; place-items:center}
+.photo{
+  width:min(420px,68vw); aspect-ratio:1/1; border-radius:50%; background:#666; overflow:hidden;
+  box-shadow:0 0 0 1px var(--ring) inset, 0 30px 60px rgba(0,0,0,.5);
+  display:grid; place-items:center; color:#eaeaea; font-weight:600; letter-spacing:.5px;
+}
+.photo img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* ===== Project Grid ===== */
+.project-grid{display:grid; grid-template-columns:1fr; gap:26px}
+@media (min-width:920px){ .project-grid{grid-template-columns:1fr 1fr} }
+
+.project-card{
+  background:var(--surface); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:24px; border:1px solid #3a3a3a; position:relative; min-height:190px;
+}
+.card-inner{display:flex; gap:20px; align-items:flex-start}
+.card-left{flex:1 1 auto}
+.card-right{flex:0 0 120px; display:flex; flex-direction:column; align-items:flex-end; gap:80px}
+.project-title{margin:0 0 10px; font-size:20px; font-weight:700; color:var(--heading)}
+.project-desc{margin:0 0 12px; color:var(--muted); text-align:justify}
+.cta{display:inline-block; text-decoration:none; font-weight:700; color:var(--accent)}
+.skill-chip{font-weight:400; font-size:14px; color:#d7d7d7; opacity:.9; text-align:end}
+.logo-circle{width:100px; height:100px; border-radius:50%; background:#4b4b4b; display:grid; place-items:center; font-size:12px; color:#e9e9e9; user-select:none}
+
+/* ===== Skills Section ===== */
+.skills-section{padding-top:28px; padding-bottom:92px}
+.skills-grid{display:grid; gap:18px; grid-template-columns:1fr;}
+@media (min-width:760px){ .skills-grid{ grid-template-columns:1fr 1fr } }
+@media (min-width:1024px){ .skills-grid{ grid-template-columns:1fr 1fr 1fr } }
+
+.skill-card{
+  background:linear-gradient(180deg, #232323, #1a1a1a);
+  border:1px solid #333; border-radius:20px;
+  padding:18px 18px 14px; box-shadow:var(--shadow);
+  transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.skill-card:hover{
+  transform:translateY(-2px);
+  border-color:#4a4a4a;
+  box-shadow:0 14px 28px rgba(0,0,0,.45);
+}
+
+.skill-title{margin:0 0 12px; color:#fff; font-weight:800; letter-spacing:.2px; font-size:18px;}
+.badges{display:flex; flex-wrap:wrap; gap:10px}
+.skill-badge{
+  background:#2f2f2f; border:1px solid #444; color:#efefef; font-weight:600;
+  padding:8px 12px; border-radius:999px; font-size:13px;
+  transition:transform .12s ease, background .2s ease, border-color .2s ease;
+  white-space:nowrap;
+}
+.skill-badge:hover{ background:#3b3b3b; border-color:#666; transform:translateY(-1px) }
+.skill-badge:active{ transform:translateY(0) }
+
+/* ===== Experience Grid ===== */
+.experience-grid{display:flex; flex-direction:column; gap:24px;}
+.experience-card{
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:24px;
+  border:1px solid #3a3a3a;
+  display:grid;
+  grid-template-columns:1fr 2fr auto;
+  align-items:flex-start;
+  gap:20px;
+}
+.exp-left{display:flex; align-items:center; gap:12px;}
+.exp-logo{
+  width:50px; height:50px; border-radius:50%;
+  background:#4b4b4b; display:grid; place-items:center;
+  font-weight:600; color:#eaeaea;
+}
+.exp-org{margin:0; font-weight:700; font-size:18px; color:var(--heading);}
+.exp-role{color:var(--muted); font-size:14px; margin-top:2px;}
+.exp-body ul{margin:0; padding-left:18px;}
+.exp-body li{margin-bottom:6px; color:var(--text);}
+.exp-right{text-align:right; color:var(--muted); font-size:14px;}
+.exp-date{font-weight:600; color:#fff;}
+@media (max-width:880px){
+  .experience-card{grid-template-columns:1fr;}
+  .exp-right{text-align:left; margin-top:12px;}
+}
+
+/* ===== Blog & Articles Section ===== */
+.blog-list{
+  display:grid;
+  gap:24px;
+  margin-top:40px;
+  margin-bottom:100px;
+}
+
+.blog-card{
+  background:var(--surface);
+  border:1px solid #333;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-template-columns:1.2fr .9fr;
+  gap:28px;
+  padding:22px;
+  position:relative;
+  transition:transform .15s ease, border-color .2s ease;
+}
+
+.blog-card:hover{
+  transform:translateY(-2px);
+  border-color:#4a4a4a;
+}
+
+.blog-card a.card-link{
+  position:absolute; inset:0;
+  z-index:1;
+  border-radius:inherit;
+}
+
+.blog-meta{
+  color:#bcbcbc;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.blog-title{
+  font-size:20px;
+  font-weight:700;
+  color:var(--heading);
+  margin:4px 0 10px;
+}
+
+.blog-excerpt{
+  color:var(--text);
+  max-width:60ch;
+}
+
+.blog-thumb{
+  background:#d9d9d9;
+  border-radius:16px;
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#222;
+}
+
+@media (max-width:900px){
+  .blog-card{grid-template-columns:1fr;}
+  .blog-thumb{min-height:160px;}
+}
+
+/* ===== Contact Section ===== */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:24px;
+}
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+.contact-card{
+  background:var(--surface);
+  border:1px solid #333;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.contact-card-title{
+  margin:0 0 14px;
+  font-size:18px;
+  font-weight:800;
+  color:var(--heading);
+}
+
+.contact-form{display:grid; gap:14px}
+.field{display:grid; gap:8px}
+.field span{font-size:14px; color: #ffffff; font-weight:600}
+input[type="text"], input[type="email"], textarea{
+  width:100%;
+  background:#d9d9d9;
+  color: #111;
+  border:1px solid #444;
+  border-radius:12px;
+  padding:12px 14px;
+  outline:none;
+}
+input::placeholder, textarea::placeholder{ color:#6b6b6b }
+
+.contact-submit{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  margin-top:6px;
+  background:#bdbdbd;
+  color:#111;
+  border:1px solid var(--ring);
+  border-radius:14px;
+  padding:12px 18px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .1s ease, background .16s ease;
+}
+.contact-submit:hover{ background:#d0d0d0 }
+.contact-submit:active{ transform:translateY(1px) }
+.paper-plane{font-size:16px}
+
+.contact-info{margin-top:8px; color:var(--muted); font-size:14px}
+
+
+/* ===== Sosial Media Icons (gambar) ===== */
+.contact-other .socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 8px;
+  justify-content: flex-start;
+}
+
+.contact-other .socials a {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-other .socials a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.contact-other .socials img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.social{
+  display:grid; place-items:center;
+  width:44px; height:44px; border-radius:12px;
+  background:#d9d9d9; color:#111; text-decoration:none; font-weight:800;
+  border:1px solid #444;
+  transition:transform .1s ease, filter .16s ease;
+}
+.social:hover{ transform:translateY(-2px); filter:brightness(1.05) }
+.social-ico{user-select:none}
+
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;         /* ini penting agar foto mengikuti bentuk lingkaran */
+  background: #4b4b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* supaya foto rapi, tidak gepeng */
+  display: block;
+}
+
+
+.exp-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;              /* penting: untuk crop gambar jadi lingkaran */
+  background: #4b4b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* gambar rapi */
+  display: block;
+}
+
+
+.blog-thumb {
+  background:#d9d9d9;
+  border-radius:16px;
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;          /* penting agar foto crop */
+}
+
+.blog-thumb img {
+  width:100%;
+  height:100%;
+  object-fit:cover;          /* agar tidak gepeng */
+  display:block;
+}

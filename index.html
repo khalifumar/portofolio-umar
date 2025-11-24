@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio – Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Logo">Logo</a>
+
+      <nav class="nav-wrap" aria-label="Primary">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="project.html">Project</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="blog.html">Articles</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Home / Hero ===== -->
+  <main id="home">
+    <div class="hero" role="region" aria-label="Beranda">
+      <div class="left">
+        <h1>Khalif Umar Al Faruq</h1>
+        <h2>Data</h2>
+
+        <div class="bio">
+          <p>I am a fifth semester Computer Science student at Bina Nusantara University with strong interests in Data Analytics, Data Science, and Data Engineering. I specialize in analytical problem solving, statistical reasoning, machine learning, data modelling, and working with tools such as Python, SQL Server, Pandas, scikit learn, Power BI, Looker Studio, Git/GitHub, and IoT development using Arduino and MQTT.</p>
+          <p>Throughout my studies, I have built various data and IoT-focused projects—such as machine-learning models, exploratory data analyses, and sensor based monitoring systems many of which are showcased on my GitHub. I also stay active in communities like GDG OC Binus Online and Safe Life with Bion, where I strengthen my teamwork, communication, and leadership skills. I aim to grow into a data and AI professional who builds impactful and dependable solutions.</p>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="contact.html">Contact Me</a>
+          <a class="btn" href="project.html">View My Project</a>
+        </div>
+      </div>
+
+      <div class="photo-wrap">
+        <figure class="photo" aria-label="Foto Profil">
+          <img id="profileImage" src="assets/img/photoIndex.jpg" alt="Foto Profil" />
+        </figure>
+      </div>
+    </div>
+
+    <!-- ===== Skills ===== -->
+    <section class="section-pad skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="skills-title">Skills &amp; Tools</h2>
+          <p class="section-sub">"A curated collection of the technologies, tools, and methodologies I frequently use to support data analysis, data science, and data engineering workflows."</p>
+        </div>
+
+        <div id="skillsGrid" class="skills-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
