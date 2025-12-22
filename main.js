@@ -55,6 +55,16 @@ window.setProfileImage = function(src){
 // ===== Data 6 Proyek (untuk project.html) =====
 const projects = [
   {
+    title: 'Toyota Market Analysis — Engineering Data Pipeline',
+    desc: [
+      'This project is an end-to-end data engineering and analytics solution designed to analyze the used Toyota car market. The goal is to transform raw vehicle listing data into clean, analytical datasets, store them in a cloud database, and generate business-ready insights through an interactive dashboard.',
+      'Metriks: ETL pipeline, Cloud Server Management, Dashboad Iteractive.',
+    ],
+    skills: 'Supabase, Looker Studio, Kaggle, Python.',
+    caseUrl: 'https://github.com/khalifumar/toyota_market_analysis',
+    image: 'assets/img/p_toyota.jpg'
+  },
+  {
     title: 'Diabetes Risk Screening — ML Deployment',
     desc: [
       'A diabetes risk-screening program designed with a strong emphasis on achieving high recall to minimize false negatives, supported by transparent threshold tuning. This project includes comprehensive data preprocessing, model training and testing, performance evaluation, and deployment through an interactive Streamlit application.',
