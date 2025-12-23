@@ -166,7 +166,7 @@ const skillsData = [
     items: ['SQL Server', 'ETL/ELT', 'Stored Procedure', 'Star Schema', 'Airflow (concepts)']
   },
   {
-    title: 'IoT & Realtime',
+    title: 'Internet of Things',
     items: ['Arduino', 'MPU6050', 'MQTT', 'Ubidots', 'Sensor Fusion (basic)', 'Serial/MQTT Debugging']
   },
   {
@@ -174,7 +174,7 @@ const skillsData = [
     items: ['Python', 'Javascript', 'Streamlit', 'C', 'HTML/CSS']
   },
   {
-    title: 'Tools & Cloud',
+    title: 'Tools',
     items: ['Power BI', 'Git/GitHub', 'VS Code', 'CI/CD (basic)', 'Figma', 'Canva']
   }
 ];
