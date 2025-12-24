@@ -7,6 +7,29 @@
   });
 })();
 
+
+// =============================
+// Responsive Navbar
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav-wrap");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+  }
+});
+
+
 // ===== Helper opsional: pasang foto profil di Home =====
 window.setProfileImage = function(src){
   const img = document.getElementById('profileImage');
@@ -58,12 +81,32 @@ const projects = [
     title: 'Toyota Market Analysis — Engineering Data Pipeline',
     desc: [
       'This project is an end-to-end data engineering and analytics solution designed to analyze the used Toyota car market. The goal is to transform raw vehicle listing data into clean, analytical datasets, store them in a cloud database, and generate business-ready insights through an interactive dashboard.',
-      'Metriks: ETL pipeline, Cloud Server Management, Dashboad Iteractive.',
+      'Topics: <br />- ETL pipeline <br />- Cloud Server Management <br />- Dashboad Iteractive.',
     ],
-    skills: 'Supabase, Looker Studio, Kaggle, Python.',
+    skills: 'Python, Supabase, Looker Studio',
     caseUrl: 'https://github.com/khalifumar/toyota_market_analysis',
     image: 'assets/img/p_toyota.jpg'
   },
+  {
+    title: 'Weather Monitoring — Engineering Data Pipeline',
+    desc: [
+      'A streamlined data pipeline project developed as part of a data engineering challenge, designed to collect, clean, and store hourly weather data from a public API. The workflow includes automated data extraction, validation, and preprocessing to ensure consistent and reliable datasets for further analysis.',
+      'Topics: <br />- ETL pipeline <br />- Airflow DAG<br />- Data quality.',
+    ],
+    skills: 'Python, Airflow, PostgreSQL',
+    caseUrl: 'https://github.com/khalifumar/weather_monitoring',
+    image: 'assets/img/p_weather.jpeg'
+  },
+  {
+    title: 'The Povety Paradox in Sumatera — Dashboard Analysis',
+    desc: [
+      'This analytical dashboard explores the underlying dynamics behind Sumatra’s poverty levels and reveals that its so-called ‘paradox’ is not accidental, but the result of recurring structural patterns. The analysis shows that high unemployment, limited labor absorption, and uneven provincial development form a chain of conditions that perpetuate poverty across the region. Despite being rich in natural resources, Sumatra demonstrates that resource abundance does not automatically translate into welfare without sustainable job creation and balanced economic growth.',
+      'Metrik: Poverty rate, Unemployment, Labor absorption, etc.',
+    ],
+    skills: 'Python, Looker Studio, Data Mining, Data Preprocessing, Data Visualization.',
+    caseUrl: 'https://lookerstudio.google.com/reporting/6ccab171-1221-4362-9ec4-ff64758df286',
+    image: 'assets/img/p_povety.jpeg'
+  },    
   {
     title: 'Diabetes Risk Screening — ML Deployment',
     desc: [
@@ -95,16 +138,6 @@ const projects = [
     image: 'assets/img/p_covid.jpeg'
   },
   {
-    title: 'Weather Monitoring — Engineering Data Pipeline',
-    desc: [
-      'A streamlined data pipeline project developed as part of a data engineering challenge, designed to collect, clean, and store hourly weather data from a public API. The workflow includes automated data extraction, validation, and preprocessing to ensure consistent and reliable datasets for further analysis. The entire pipeline is orchestrated and scheduled using Apache Airflow, enabling fully automated hourly ingestion and processing.',
-      'Metrik: ETL pipeline, Airflow DAG, Data quality.',
-    ],
-    skills: 'Python, Airflow, ETL, Docker',
-    caseUrl: 'https://github.com/khalifumar/weather_monitoring',
-    image: 'assets/img/p_weather.jpeg'
-  },
-  {
     title: 'Indonesian Independent Day — Project Management',
     desc: [
       'In celebration of Indonesia’s 79th Independence Day, our team from the Community Youth Development Association (Karang Taruna) organized a series of community-centered activities, including traditional competitions, neighborhood decorations, and public health check-ups. This initiative aimed to strengthen social engagement, foster collaboration among residents, and promote a healthy and festive environment that reflects the spirit of unity and national pride.',
@@ -113,16 +146,6 @@ const projects = [
     skills: 'Leader, Project Management, Team Work, Event Organizer',
     caseUrl: 'https://www.linkedin.com/in/khalifumaralfaruq/details/projects/?locale=en_US',
     image: 'assets/img/p_independence.jpeg'
-  },
-  {
-    title: 'The Povety Paradox in Sumatra — Dashboard Analysis',
-    desc: [
-      'This analytical dashboard explores the underlying dynamics behind Sumatra’s poverty levels and reveals that its so-called ‘paradox’ is not accidental, but the result of recurring structural patterns. The analysis shows that high unemployment, limited labor absorption, and uneven provincial development form a chain of conditions that perpetuate poverty across the region. Despite being rich in natural resources, Sumatra demonstrates that resource abundance does not automatically translate into welfare without sustainable job creation and balanced economic growth.',
-      'Metrik: Poverty rate, Unemployment, Labor absorption, etc.',
-    ],
-    skills: 'Python, Looker Studio, Data Mining, Data Preprocessing, Data Visualization.',
-    caseUrl: 'https://lookerstudio.google.com/reporting/6ccab171-1221-4362-9ec4-ff64758df286',
-    image: 'assets/img/p_povety.jpeg'
   }
 ];
 
@@ -130,26 +153,37 @@ const projects = [
 (function renderProjectsIfNeeded(){
   const grid = document.getElementById('projectGrid');
   if (!grid) return;
+
   grid.innerHTML = projects.map(p => `
-    <article class="project-card">
-      <div class="card-inner">
-        <div class="card-left">
-          <h3 class="project-title">${p.title}</h3>
-          ${p.desc.map(d => `<p class="project-desc">${d}</p>`).join('')}
-          <a class="cta" href="${p.caseUrl}" aria-label="Buka case study ${p.title}">
-            View Case Study ->
-          </a>
-        </div>
-        <div class="card-right">
-          <div class="skill-chip">${p.skills}</div>
-          <div class="logo-circle">
-            <img src="${p.image}" alt="${p.title}">
+    <a 
+      href="${p.caseUrl}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="project-link"
+      aria-label="Open project ${p.title}"
+    >
+      <article class="project-card">
+        <div class="card-inner">
+
+          <div class="card-left">
+            <h3 class="project-title">${p.title}</h3>
+            ${p.desc.map(d => `<p class="project-desc">${d}</p>`).join('')}
           </div>
+
+          <div class="card-right">
+            <div class="skill-chip">${p.skills}</div>
+
+            <div class="logo-circle">
+              ${p.image ? `<img src="${p.image}" alt="${p.title} logo">` : 'Logo'}
+            </div>
+          </div>
+
         </div>
-      </div>
-    </article>
+      </article>
+    </a>
   `).join('');
 })();
+
 
 // ===== Skills data (untuk Home) =====
 const skillsData = [
