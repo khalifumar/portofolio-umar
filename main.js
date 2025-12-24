@@ -81,7 +81,7 @@ const projects = [
     title: 'Toyota Market Analysis — Engineering Data Pipeline',
     desc: [
       'This project is an end-to-end data engineering and analytics solution designed to analyze the used Toyota car market. The goal is to transform raw vehicle listing data into clean, analytical datasets, store them in a cloud database, and generate business-ready insights through an interactive dashboard.',
-      'Topics: <br />- ETL pipeline <br />- Cloud Server Management <br />- Dashboad Iteractive.',
+      'Topics: <br />- ETL pipeline <br />- Cloud Server Management <br />- Dashboad Iteractive<br />- Data Cleaning & Visualization<br />- Business Insights<br />- Integration Database Server<br />- etc.',
     ],
     skills: 'Python, Supabase, Looker Studio',
     caseUrl: 'https://github.com/khalifumar/toyota_market_analysis',
@@ -91,7 +91,7 @@ const projects = [
     title: 'Weather Monitoring — Engineering Data Pipeline',
     desc: [
       'A streamlined data pipeline project developed as part of a data engineering challenge, designed to collect, clean, and store hourly weather data from a public API. The workflow includes automated data extraction, validation, and preprocessing to ensure consistent and reliable datasets for further analysis.',
-      'Topics: <br />- ETL pipeline <br />- Airflow DAG<br />- Data quality.',
+      'Topics: <br />- ETL pipeline <br />- Airflow DAG<br />- Data quality<br />- API integration<br />- Data Cleaning<br />- etc.',
     ],
     skills: 'Python, Airflow, PostgreSQL',
     caseUrl: 'https://github.com/khalifumar/weather_monitoring',
@@ -101,7 +101,7 @@ const projects = [
     title: 'The Povety Paradox in Sumatera — Dashboard Analysis',
     desc: [
       'This analytical dashboard explores the underlying dynamics behind Sumatra’s poverty levels and reveals that its so-called ‘paradox’ is not accidental, but the result of recurring structural patterns. The analysis shows that high unemployment, limited labor absorption, and uneven provincial development form a chain of conditions that perpetuate poverty across the region. Despite being rich in natural resources, Sumatra demonstrates that resource abundance does not automatically translate into welfare without sustainable job creation and balanced economic growth.',
-      'Metrik: Poverty rate, Unemployment, Labor absorption, etc.',
+      'Metrik: <br />- Poverty rate<br />- Unemployment<br />- Labor absorption<br />- etc.',
     ],
     skills: 'Python, Looker Studio, Data Mining, Data Preprocessing, Data Visualization.',
     caseUrl: 'https://lookerstudio.google.com/reporting/6ccab171-1221-4362-9ec4-ff64758df286',
@@ -111,7 +111,7 @@ const projects = [
     title: 'Diabetes Risk Screening — ML Deployment',
     desc: [
       'A diabetes risk-screening program designed with a strong emphasis on achieving high recall to minimize false negatives, supported by transparent threshold tuning. This project includes comprehensive data preprocessing, model training and testing, performance evaluation, and deployment through an interactive Streamlit application.',
-      'Fitur: Model Evaluation, Explainability, Prediction, ',
+      'Fitur:<br />-  Model Evaluation<br />- Explainability<br />- Prediction<br />- Threshold Tuning<br />- High Recall Implementation<br />- etc.',
     ],
     skills: 'Python, scikit-learn, Streamlit',
     caseUrl: 'https://pimaindiansdiabetes-h3gzepp83swgtbokftxz4y.streamlit.app/?',
@@ -121,7 +121,7 @@ const projects = [
     title: 'Hajj & Umrah Analysis — Dashboard Analyst',
     desc: [
       'A comprehensive data analysis project examining key trends, patterns, and demographic insights related to Hajj and Umrah activities. This project includes data cleaning, exploratory data analysis, statistical interpretation, and visualization of participant distributions, capacity growth, and historical changes.',
-      'Metrik: pilgrim trends, country, body roll.',
+      'Metrik: <br />- Activity Type<br />- Incident Type<br />- Fatigue Level<br />- Health Condition<br />- pilgrim trends <br />- country <br />- body roll<br />- etc.',
     ],
     skills: 'Python, Power BI, Canva',
     caseUrl: 'https://app.powerbi.com/links/HGJ_qw2m9y?ctid=3485b963-82ba-4a6f-810f-b5cc226ff898&pbi_source=linkShare',
@@ -131,7 +131,7 @@ const projects = [
     title: 'Covid 19 Impact Analysis — Dashboard Deployment',
     desc: [
       'A comprehensive analytical project focused on comparing pre–Covid-19 and post–Covid-19 conditions across various industrial sectors to understand the pandemic’s structural and economic impact. The project involves extensive data preprocessing, exploratory data analysis, industry-level trend comparison, and statistical interpretation to identify significant shifts in productivity, demand patterns, workforce distribution, and operational dynamics.',
-      'Metrik: Industry comparison, Time series, Shifts.',
+      'Metrik: <br />- Industry comparison <br />- Time series <br />- Shifts.',
     ],
     skills: 'Python, Poster, Streamlit',
     caseUrl: 'https://dampak-pandemi-terhadap-industri-2018-2021.streamlit.app/',
@@ -141,7 +141,7 @@ const projects = [
     title: 'Indonesian Independent Day — Project Management',
     desc: [
       'In celebration of Indonesia’s 79th Independence Day, our team from the Community Youth Development Association (Karang Taruna) organized a series of community-centered activities, including traditional competitions, neighborhood decorations, and public health check-ups. This initiative aimed to strengthen social engagement, foster collaboration among residents, and promote a healthy and festive environment that reflects the spirit of unity and national pride.',
-      'Environment: Community event and Social impact.',
+      'Environment: <br />- Community event and Social impact.',
     ],
     skills: 'Leader, Project Management, Team Work, Event Organizer',
     caseUrl: 'https://www.linkedin.com/in/khalifumaralfaruq/details/projects/?locale=en_US',
