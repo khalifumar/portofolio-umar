@@ -141,6 +141,36 @@ main{max-width:var(--container); margin:0 auto; padding:50px 20px 40px}
 .hero{display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:48px}
 .hero h1{margin:0 0 8px; font-size:clamp(50px,4vw,51px); line-height:1.1; color:var(--heading); font-weight:1000}
 .hero h2{margin:0 0 28px; font-size:clamp(22px,3vw,40px); color:var(--heading); font-weight:500}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {grid-template-columns: 1fr; gap: 40px;}
+  .photo {width: 320px;}
+  .hero h1 {font-size: 52px;}
+  .hero h2 {font-size: 30px;}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {padding: 32px 16px 64px;}
+  .hero {text-align: center;}
+  .photo-wrap {order: 1;}
+  .photo {width: 240px;}
+  .hero h1 {font-size: 38px;}
+  .hero h2 {font-size: 22px; margin-bottom: 20px;}
+  .bio {font-size: 15px;}
+  .actions {flex-direction: column; align-items: center;}
+  .btn {width: 100%;max-width: 260px;}
+}
+
+/* Extra small phone */
+@media (max-width: 480px) {
+  .photo {width: 200px;}
+  .hero h1 {font-size: 32px;}
+  .hero h2 {font-size: 20px;}
+}
+
+
 .bio{max-width:720px; font-size:16px; text-align:justify}
 .bio p{margin:0 0 16px; color:var(--heading)}
 .actions{display:flex; gap:16px; margin-top:10px; margin-bottom:50px;}
@@ -163,8 +193,13 @@ main{max-width:var(--container); margin:0 auto; padding:50px 20px 40px}
 }
 
 /* ===== Project Grid ===== */
-.project-grid{  display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px;align-items: stretch;}
+.project-grid{  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;align-items: stretch;}
 @media (min-width:920px){ .project-grid{grid-template-columns:1fr 1fr} }
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-card{
   height: 100%;
@@ -221,6 +256,42 @@ main{max-width:var(--container); margin:0 auto; padding:50px 20px 40px}
 }
 .project-link:hover .project-card::after {
   opacity: .6;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 640px) {
+
+  .project-card {
+    min-height: unset;
+    padding: 20px;
+  }
+
+  .card-inner {
+    flex-direction: column;
+  }
+
+  .card-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .logo-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
 }
 
 
